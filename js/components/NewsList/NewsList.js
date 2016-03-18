@@ -11,7 +11,7 @@ class NewsList extends React.Component {
             title: PropTypes.string.isRequired,
             id: PropTypes.string.isRequired,
             type: PropTypes.string.isRequired,
-            preview: PropTypes.string.isRequired
+            preview: PropTypes.string
           }).isRequired
         })).isRequired
       }).isRequired
