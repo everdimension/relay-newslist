@@ -6,7 +6,7 @@ class News extends React.Component {
   render() {
     return (
       <div className="container page">
-        <h1>News list</h1>
+        <h1 className="page-title">News list</h1>
         <NewsList newsFeed={this.props.newsFeed} />
       </div>
     );

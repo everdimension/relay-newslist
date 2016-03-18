@@ -16,9 +16,9 @@ class Article extends React.Component {
     const { article } = this.props;
     return (
       <div>
-        <h1>{article.title}</h1>
+        <h1 className="page-title">{article.title}</h1>
         <div className="Article">
-          <p>{article.content}</p>
+          <p className="Article__paragraph">{article.content}</p>
           <div>
             <Link to="/">Back to news list</Link>
           </div>
