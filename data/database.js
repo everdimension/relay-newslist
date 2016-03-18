@@ -12,6 +12,7 @@ const articleTypes = ['worldNews', 'science', 'fiction', 'facts', 'lies'];
     article.id = i + '';
     article.title = `Article Title ${i}`;
     article.content = 'A fractal is a never-ending pattern. Fractals are infinitely complex patterns that are self-similar across different scales. They are created by repeating a simple process over and over in an ongoing feedback loop.';
+    article.preview = `${article.content.slice(0, 80)}...`;
     article.type = articleTypes[i % articleTypes.length];
     articles.push(article);
   }

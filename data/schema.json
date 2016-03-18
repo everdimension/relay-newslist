@@ -420,6 +420,18 @@
               "deprecationReason": null
             },
             {
+              "name": "preview",
+              "description": "Article's short preview",
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "type",
               "description": "Article's type",
               "args": [],

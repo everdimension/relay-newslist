@@ -98,6 +98,10 @@ var articleType = new GraphQLObjectType({
       type: GraphQLString,
       description: 'Article\'s content'
     },
+    preview: {
+      type: GraphQLString,
+      description: 'Article\'s short preview'
+    },
     type: {
       type: GraphQLString,
       description: 'Article\'s type'

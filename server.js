@@ -4,6 +4,7 @@ import path from 'path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import { Schema } from './data/schema';
+import config from './webpack.config.js';
 
 const APP_PORT = 3000;
 const GRAPHQL_PORT = 8080;
@@ -20,19 +21,7 @@ graphQLServer.listen(GRAPHQL_PORT, () => console.log(
 ));
 
 // Serve the Relay app
-var compiler = webpack({
-  entry: path.resolve(__dirname, 'js', 'app.js'),
-  module: {
-    loaders: [
-      {
-        exclude: /node_modules/,
-        test: /\.js$/,
-        loader: 'babel'
-      }
-    ]
-  },
-  output: {filename: 'app.js', path: '/'}
-});
+var compiler = webpack(config);
 var app = new WebpackDevServer(compiler, {
   contentBase: '/public/',
   proxy: {'/graphql': `http://localhost:${GRAPHQL_PORT}`},

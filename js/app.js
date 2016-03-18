@@ -7,8 +7,11 @@ import Relay from 'react-relay';
 import { Route, browserHistory } from 'react-router';
 import { RelayRouter } from 'react-router-relay';
 
-import App from './components/App';
-import Article from './components/Article';
+import NewsListContainer from './containers/NewsListContainer';
+import ArticleContainer from './containers/ArticleContainer';
+
+import 'normalize.css/normalize.css';
+import './components/styles.scss';
 
 // The root queries for the main site
 const AppQueries = {
@@ -37,12 +40,12 @@ ReactDOM.render(
   >
     <Route
       path="/"
-      component={App}
+      component={NewsListContainer}
       queries={AppQueries} // and the query
     />
     <Route
       path="/article/:id"
-      component={Article}
+      component={ArticleContainer}
       queries={ArticleQueries}
     />
 </RelayRouter>,
