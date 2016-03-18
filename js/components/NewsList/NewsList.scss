@@ -15,7 +15,7 @@
 
       &:hover, &:focus {
         background-color: #fafafa;
-        .NewsList__article-title {
+        .NewsList__article-name {
           text-decoration: underline;
         }
       }
@@ -33,6 +33,9 @@
     margin-bottom: 1em;
     font-size: 1em;
     color: #666;
+    small {
+      color: #aaa;
+    }
   }
 
   &__preview-image {

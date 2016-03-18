@@ -78,8 +78,13 @@ var newsFeedType = new GraphQLObjectType({
     articles: {
       type: articleConnection,
       description: 'Articles on some news and stories',
-      args: connectionArgs,
-      resolve: (_, args) => connectionFromArray(getArticles(), args)
+      args: {
+        ...connectionArgs,
+        types: {
+          type: new GraphQLList(GraphQLString)
+        }
+      },
+      resolve: (_, args) => connectionFromArray(getArticles(args.types), args)
     }
   }),
   interfaces: [nodeInterface]

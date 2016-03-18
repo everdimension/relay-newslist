@@ -34,7 +34,11 @@ class NewsList extends React.Component {
                 </div>
                 <div className="media-body media-middle">
                   <h3 className="NewsList__article-title">
-                    {edge.node.title}
+                    <span className="NewsList__article-name">
+                      {edge.node.title}
+                    </span>
+                    {' '}
+                    <small>{edge.node.type}</small>
                   </h3>
                   <div>{edge.node.preview}</div>
                 </div>

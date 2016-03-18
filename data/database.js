@@ -27,5 +27,10 @@ newsFeed.id = '1';
 export function getArticle(id) {
   return articles.find(a => a.id === id);
 }
-export function getArticles() { return articles; }
+export function getArticles(types) {
+  if (!types || !types.length) {
+    return articles;
+  }
+  return articles.filter(a => types.includes(a.type));
+}
 export function getNewsFeed() { return newsFeed; }
