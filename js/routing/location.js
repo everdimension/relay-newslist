@@ -2,7 +2,7 @@ import qs from 'qs';
 import { browserHistory } from 'react-router';
 
 const QS_OPTIONS = {
-  arrayFormat: 'repeat'
+  arrayFormat: 'repeat',
 };
 
 export function getLocationSearch() {

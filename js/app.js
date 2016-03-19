@@ -21,7 +21,7 @@ const AppQueries = {
         ${Component.getFragment('newsFeed')}
       }
     }
-  `
+  `,
 };
 
 const ArticleQueries = {
@@ -31,7 +31,7 @@ const ArticleQueries = {
         ${Component.getFragment('article')}
       }
     }
-  `
+  `,
 };
 
 ReactDOM.render(

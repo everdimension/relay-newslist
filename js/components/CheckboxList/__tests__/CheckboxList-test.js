@@ -58,6 +58,5 @@ describe('CheckboxList', () => {
 
     input.simulate('change');
     expect(timesCalled).to.equal(2);
-
   });
 });

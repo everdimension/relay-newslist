@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Relay from 'react-relay';
 import Article from '../components/Article';
 
 class ArticleContainer extends React.Component {
+  static propTypes = {
+    article: PropTypes.object.isRequired,
+  }
+
   render() {
     return (
       <div className="container page">
@@ -21,6 +25,6 @@ export default Relay.createContainer(ArticleContainer, {
         content,
         type
       }
-    `
-  }
+    `,
+  },
 });

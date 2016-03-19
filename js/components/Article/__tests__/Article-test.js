@@ -8,7 +8,7 @@ describe('Article', () => {
     title: 'rnd',
     id: '1',
     content: 'rnd',
-    type: 'rnd'
+    type: 'rnd',
   };
 
   it('renders with an .Article class', () => {

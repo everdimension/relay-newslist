@@ -8,8 +8,8 @@ class Article extends React.Component {
       title: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired
-    }).isRequired
+      content: PropTypes.string.isRequired,
+    }).isRequired,
   }
 
   render() {

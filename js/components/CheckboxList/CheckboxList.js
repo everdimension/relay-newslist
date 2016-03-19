@@ -18,7 +18,7 @@ class CheckboxList extends React.Component {
     if (typesArray.includes(type)) {
       newTypes = typesArray.filter(t => t !== type);
     } else {
-      newTypes = [ ...typesArray, type ];
+      newTypes = [...typesArray, type];
     }
     this.props.onUpdate(newTypes);
   };

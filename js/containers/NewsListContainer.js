@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Relay from 'react-relay';
 import { getLocationSearch, setLocationSearch } from '../routing/location';
 import NewsList from '../components/NewsList';
@@ -7,6 +7,13 @@ import CheckboxList from '../components/CheckboxList';
 const possibleTypes = ['world', 'science', 'fiction', 'facts', 'lies'];
 
 class News extends React.Component {
+  static propTypes = {
+    relay: PropTypes.shape({
+      setVariables: PropTypes.func,
+    }).isRequired,
+    newsFeed: PropTypes.object.isRequired,
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +27,7 @@ class News extends React.Component {
     this.props.relay.setVariables({ types });
   };
 
-  handleUpdateTypes = (evt) => {
+  handleUpdateTypes = () => {
     this.updateTypes();
   };
 
@@ -57,6 +64,6 @@ export default Relay.createContainer(News, {
           }
         }
       }
-    `
-  }
+    `,
+  },
 });
