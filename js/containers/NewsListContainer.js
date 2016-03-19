@@ -21,10 +21,19 @@ class News extends React.Component {
     };
   }
 
+  componentDidMount() {
+    const { types } = getLocationSearch();
+    this.updateQuery({ types });
+  }
+
+  updateQuery = (params) => {
+    this.props.relay.setVariables(params);
+  };
+
   updateTypes = (types) => {
     this.setState({ types });
     setLocationSearch({ types }, { replace: true });
-    this.props.relay.setVariables({ types });
+    this.updateQuery({ types });
   };
 
   handleUpdateTypes = () => {
