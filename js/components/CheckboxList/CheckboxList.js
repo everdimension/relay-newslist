@@ -28,16 +28,17 @@ class CheckboxList extends React.Component {
   };
 
   render() {
+    const { possibleTypes, types } = this.props;
     return (
       <div className="Filters">
-        {this.props.possibleTypes.map(type => (
+        {possibleTypes.map(type => (
           <div key={type} className="typeCheckbox">
             <input onChange={this.handleChange}
               type="checkbox"
               name={type}
               value={type}
               id={type}
-              checked={this.props.types.includes(type)}
+              checked={types.includes(type)}
             />
             <label htmlFor={type}>{type}</label>
           </div>

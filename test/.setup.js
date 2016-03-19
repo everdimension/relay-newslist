@@ -1,4 +1,5 @@
 require('babel-register')();
+require('babel-polyfill');
 
 var jsdom = require('jsdom').jsdom;
 
@@ -17,7 +18,7 @@ global.navigator = {
   userAgent: 'node.js'
 };
 
-documentRef = document;
+global.documentRef = document;
 
 // ignore css
 function noop() {
