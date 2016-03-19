@@ -10,11 +10,12 @@
     cursor: pointer;
     display: inline-block;
     padding: 5px;
-    background-color: #444;
-    color: white;
+    background-color: #ccc;
+    color: #f1f1f1;
   }
 
   input:checked + label {
-    color: green;
+    background-color: #444;
+    color: white;
   }
 }
